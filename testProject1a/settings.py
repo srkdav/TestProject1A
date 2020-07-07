@@ -39,8 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapia.apps.MyapiaConfig',
     'rest_framework',
-    'drf_yasg',
-    'corsheaders'
+    'drf_yasg'
 ]
 
 REST_FRAMEWORK = {
