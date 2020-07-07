@@ -39,14 +39,24 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'myapia.apps.MyapiaConfig',
     'rest_framework',
-    'drf_yasg'
+    'drf_yasg',
+    # 'authentication'
 ]
 
-REST_FRAMEWORK = {
-    'DEFAULT_AUTHENTICATION_CLASSES': (
-        'authentication.backends.JWTAuthentication',
-    )
-}
+# SWAGGER_SETTINGS = {
+#     'SECURITY_DEFINITIONS': {
+#         "Auth Token eg [Bearer (JWT) ]": {
+#             "type": "apiKey",
+#             "name": "Authorization",
+#             "in": "header"
+#         }
+#     }
+# }
+# REST_FRAMEWORK = {
+#     'DEFAULT_AUTHENTICATION_CLASSES': (
+#         'authentication.backends.JWTAuthentication',
+#     )
+# }
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -125,15 +135,6 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
-# # CORS WHITELIST
-# CORS_ORIGIN_WHITELIST = [
-#     "http://localhost:3000",
-#     "http://127.0.0.1:8080"
-# ]
-
-# CORS_ORIGIN_REGEX_WHITELIST = [
-#     r"^https://\w+\.netlify\.app$",
-# ]
 
 # JWT
 JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
